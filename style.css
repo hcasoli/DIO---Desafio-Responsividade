@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-texto);
+}
+
+:root {
+    --fonte-texto: "Open Sans", sans-serif;
+    --fonte-titulo: "Luckiest Guy", cursive;
+    --cor-texto-claro: #FFF;
+    --cor-texto-escuro: #23272A;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-image: url(imagens/header-background-mobile.png);
+    background-repeat: no-repeat;
+    display: flex;  
+}
+
+#section-header {
+    padding: 70px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+
+h1 {
+    font-family: var(--fonte-titulo);
+    text-transform: uppercase;
+    color: var(--cor-texto-claro);
+    font-size: 2rem;
+}
+
+header p {
+    color: var(--cor-texto-claro);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#baixar, #abrir:hover{
+    cursor: pointer;
+}
+
+#baixar, #abrir {
+    border-radius: 28px;
+    border: none;
+    width: 380px;
+    height: 54px;
+    font-size: 1rem;
+    padding: 16px;
+    font-weight: 400;
+}
+
+#baixar {
+    background-color: #fff;
+    color: #23272A;
+}
+
+#abrir {
+    background-color: #23272A;
+    color: #FFF;
+}
+
+.content-1, .content-2, .content-3, .content-4 {
+    padding: 0 24px 40px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    color: var(--cor-texto-escuro);
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 1.5rem; 
+}
+
+.content-1 p, .content-2 p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.content-4 h2 {
+    font-family: var(--fonte-titulo);
+    text-transform: uppercase;
+    color: var(--cor-texto-escuro);
+    font-size: 2rem;
+}
+
+footer{
+    background-color: var(--cor-texto-escuro);
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px){
+    header{
+        background-image: url(imagens/background-header.png);
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+    #section-header {
+        text-align: center;
+    }
+
+    .header-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .content-1, .content-2, .content-3 {
+        display: flex;
+        flex-direction: row;
+        padding-top: 1rem;
+        justify-content: center;
+    }
+
+    .content-2 {
+        flex-direction: row-reverse;
+        justify-content: baseline;
+    }
+
+    .content-4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo-texto {
+        width: 348px;
+        height: 374px;
+    }
+
+    .conteudo-texto h2 {
+        font-size: 2.5rem;
+    }
+
+}
